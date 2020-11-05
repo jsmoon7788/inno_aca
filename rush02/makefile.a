@@ -1,0 +1,19 @@
+CC=name
+SRCDIR=gcc할 경로
+CFLAGS=-Wall -Wextra -Werror
+LDFLAGS=<링크 옵션>
+LDLIBS=<링크 라이브러리 목록>
+SRCS=$(wildcard $(SRCDIR)/*.c)
+OBJS=$(wildcard $(SRCDIR)/*.o)
+OBJS=<Object 파일 목록>
+TARGET=rush-02
+​
+all: $(cc) $(CFLAGS)
+.c.o: gcc $(FLAGS)-c $<-o $o -I $(INCDIR)
+clean:
+    rm -f *.o
+​
+fclean:
+​
+$(TARGET): $(OBJS)
+$(CC) -o $@ $(OBJS)
